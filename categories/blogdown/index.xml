@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogdown on Sudarshana A</title>
+    <link>/categories/blogdown/</link>
+    <description>Recent content in Blogdown on Sudarshana A</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Personal Blog using Blogdown</title>
+      <link>/post/new-personal-blog-using-blogdown/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new-personal-blog-using-blogdown/</guid>
+      <description>Past few days I was busy with DataCamp lessons and not much time for write something new. I have transfred by previous blog entries(SnD Creations) to new repository and used blogdown with beautifulhugo theme.
+Several Hugo themes have been used beofre selecting beautifulhugo theme. I want somehting similar to bootstrap with fixed navigation bar, plus support for Math.
+Thanks to blogdown book from Yihui Xie, finally I have re-launched the site using blogdown &amp;amp; Hugo.</description>
+    </item>
+    
+  </channel>
+</rss>

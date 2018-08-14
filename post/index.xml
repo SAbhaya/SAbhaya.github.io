@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sudarshana A</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Sudarshana A</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Personal Blog using Blogdown</title>
+      <link>/post/new-personal-blog-using-blogdown/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new-personal-blog-using-blogdown/</guid>
+      <description>Past few days I was busy with DataCamp lessons and not much time for write something new. I have transfred by previous blog entries(SnD Creations) to new repository and used blogdown with beautifulhugo theme.
+Several Hugo themes have been used beofre selecting beautifulhugo theme. I want somehting similar to bootstrap with fixed navigation bar, plus support for Math.
+Thanks to blogdown book from Yihui Xie, finally I have re-launched the site using blogdown &amp;amp; Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Keyboard Backlight - Dell - Ubuntu</title>
+      <link>/post/2018-05-20-ubuntu-dell-backlight/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-05-20-ubuntu-dell-backlight/</guid>
+      <description>I have realised my Dell laptop keyborad backlight doesn&amp;rsquo;t light up in Ubuntu. So did some browsing and changed the config file.
+ Set the brightness level to &amp;gt; 0 using below, you need to change the value using super user (or root). Open the config using nano editor.  sudo nano /sys/devices/platform/dell-laptop/leds/dell\:\:kbd_backlight/brightness change the value 0, I have changed it to 2, then save the config.
+ Also if required we can set the timeout of the keyboard backlight.</description>
+    </item>
+    
+    <item>
+      <title>Installed CherryTree</title>
+      <link>/post/2018-03-28-install-cherry-tree/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-28-install-cherry-tree/</guid>
+      <description>To day I have installed CherryTree. Nice note taking application. You can download CheeryTree from here. </description>
+    </item>
+    
+    <item>
+      <title>Set up local copy of site</title>
+      <link>/post/2018-03-24-install-local-copy-of-site/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-24-install-local-copy-of-site/</guid>
+      <description>To day I have installed a local copy of this web site. Using Jekyll. I have refered Setting up your GitHub Pages site locally with Jekyll for that.
+As per the instruction below command used for check the Ruby version.
+ruby --version I had to installed Ruby, then bundler but after completting most of the items, an error message popped up in the terminal.
+ Failed to build gem native extension&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Simple Probability with R programming project</title>
+      <link>/post/2018-03-23-simple-probability/</link>
+      <pubDate>Fri, 23 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-23-simple-probability/</guid>
+      <description>Add more functinality to my simple probability R markdown files. Used dplyr and tidyr packages to arrange data.</description>
+    </item>
+    
+    <item>
+      <title>Lets Try Sinhala | අපි සිංහල ලියමු !</title>
+      <link>/post/2018-03-04-lets-try-sinhala/</link>
+      <pubDate>Sun, 04 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-04-lets-try-sinhala/</guid>
+      <description> I couldn&amp;rsquo;t find Sinhala key input system like Sri Shell. So I had a chat with the person who developed the Sri Shell. He told me to use Google Input.
+So I tried using Google Sinhala Input
+Sinhala Input සිංහල ලිවීම හරිම ලේසියි . මෙන්න මෙහෙමයි . </description>
+    </item>
+    
+    <item>
+      <title>Installed Ubuntu 17.10</title>
+      <link>/post/2018-03-03-ubuntu-installed/</link>
+      <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-03-ubuntu-installed/</guid>
+      <description>To day I have installed Ubuntu 17.10 on new laptop. Also installed RStudio, Git and tried Scratch, but Scratch is an old version so uninstalled that.</description>
+    </item>
+    
+    <item>
+      <title>Tried Ubuntu 17.10</title>
+      <link>/post/2018-03-01-ubuntu-tried/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-03-01-ubuntu-tried/</guid>
+      <description>To day I have tried Ubuntu 17.10 on new laptop. Previously tried the Ubuntu 16.04. Seems fine to install it along side with Win7. I bought new (actually it is not new, bought it 2nd hand laptop via ebay.) laptop. It supposed to come without OS but new copy of OEM windows 7 already there. :smiley:</description>
+    </item>
+    
+    <item>
+      <title>Learning and Testing GIT</title>
+      <link>/post/2018-02-25-learning-and-testing/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-02-25-learning-and-testing/</guid>
+      <description>Today I played around with GitHub and installed Git for windows. Changed my commit email and used noreply email generated by GitHub.
+GIT Bash Also used Git Bash..</description>
+    </item>
+    
+    <item>
+      <title>SnD Creations, Launches Site</title>
+      <link>/post/2018-02-15-first-post/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-02-15-first-post/</guid>
+      <description>Well. Finally got around to putting this. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.</description>
+    </item>
+    
+  </channel>
+</rss>
