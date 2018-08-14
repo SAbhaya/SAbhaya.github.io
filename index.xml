@@ -5,17 +5,32 @@
     <link>/</link>
     <description>Recent content on Sudarshana A</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>GitHub changes - user name</title>
+      <link>/post/2018-08-14-github-changes-user-name/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-08-14-github-changes-user-name/</guid>
+      <description>I have changed my GitHub user name to more meaningful name. 😃
+ What happens when I change my username?
+ Also spent some time to clean up my GitHub account and set up all the remote links to the repositories.
+First I have listed my existing remotes to get the names
+e.g.
+go to the local repository folder and run the command git remote -v
+$ git remote -v origin	https://github.</description>
+    </item>
+    
+    <item>
       <title>New Personal Blog using Blogdown</title>
-      <link>/post/new-personal-blog-using-blogdown/</link>
+      <link>/post/2018-08-09-new-personal-blog-using-blogdown/</link>
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-personal-blog-using-blogdown/</guid>
+      <guid>/post/2018-08-09-new-personal-blog-using-blogdown/</guid>
       <description>Past few days I was busy with DataCamp lessons and not much time for write something new. I have transfred by previous blog entries(SnD Creations) to new repository and used blogdown with beautifulhugo theme.
 Several Hugo themes have been used beofre selecting beautifulhugo theme. I want somehting similar to bootstrap with fixed navigation bar, plus support for Math.
 Thanks to blogdown book from Yihui Xie, finally I have re-launched the site using blogdown &amp;amp; Hugo.</description>
@@ -88,7 +103,7 @@ Sinhala Input සිංහල ලිවීම හරිම ලේසියි . 
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018-03-01-ubuntu-tried/</guid>
-      <description>To day I have tried Ubuntu 17.10 on new laptop. Previously tried the Ubuntu 16.04. Seems fine to install it along side with Win7. I bought new (actually it is not new, bought it 2nd hand laptop via ebay.) laptop. It supposed to come without OS but new copy of OEM windows 7 already there. :smiley:</description>
+      <description>To day I have tried Ubuntu 17.10 on new laptop. Previously tried the Ubuntu 16.04. Seems fine to install it along side with Win7. I bought new (actually it is not new, bought it 2nd hand laptop via ebay.) laptop. It supposed to come without OS but new copy of OEM windows 7 already there. 😃</description>
     </item>
     
     <item>

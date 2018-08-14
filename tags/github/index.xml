@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Sudarshana A</title>
+    <link>/tags/github/</link>
+    <description>Recent content in Github on Sudarshana A</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitHub changes - user name</title>
+      <link>/post/2018-08-14-github-changes-user-name/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-08-14-github-changes-user-name/</guid>
+      <description>I have changed my GitHub user name to more meaningful name. 😃
+ What happens when I change my username?
+ Also spent some time to clean up my GitHub account and set up all the remote links to the repositories.
+First I have listed my existing remotes to get the names
+e.g.
+go to the local repository folder and run the command git remote -v
+$ git remote -v origin	https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

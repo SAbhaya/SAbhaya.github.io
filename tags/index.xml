@@ -19,5 +19,41 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Change</title>
+      <link>/tags/change/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/change/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/tags/git/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Username</title>
+      <link>/tags/username/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/username/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
