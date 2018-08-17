@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Simple Probability</title>
+  <meta property="og:title" content="Simple Probability" />
+  <meta name="twitter:title" content="Simple Probability" />
+  <meta name="description" content="Introduction This is to explain some very simple probability &amp; using R scripts to demonstrate the probability concept. Most of you already know these things. We can use this to revise some basic probability concepts.
+ Basic probability The probababilty of perticuar event can be described as:
+\[ \text{Probabillity} = \frac{\text{Number of favourable outcome}}{\text{Number of possible eaqually like outcomes}} \]
+Lets assume simple coin. It has a two faces and if you toss the coin it will give result either HEAD or TAIL">
+  <meta property="og:description" content="Introduction This is to explain some very simple probability &amp; using R scripts to demonstrate the probability concept. Most of you already know these things. We can use this to revise some basic probability concepts.
+ Basic probability The probababilty of perticuar event can be described as:
+\[ \text{Probabillity} = \frac{\text{Number of favourable outcome}}{\text{Number of possible eaqually like outcomes}} \]
+Lets assume simple coin. It has a two faces and if you toss the coin it will give result either HEAD or TAIL">
+  <meta name="twitter:description" content="Introduction This is to explain some very simple probability &amp; using R scripts to demonstrate the probability concept. Most of you already know these things. We can use this to revise some basic …">
+  <meta name="author" content="SA"/>
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="/page/simprob/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sudarshana A" />
+
+  <meta name="generator" content="Hugo 0.45.1" />
+  <link rel="canonical" href="/page/simprob/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Sudarshana A">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Sudarshana A</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Projects</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/simprob">Simple Probability</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Simple Probability</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is to explain some very simple probability &amp; using R scripts to demonstrate the probability concept. Most of you already know these things. We can use this to revise some <em>basic probability</em> concepts.</p>
+</div>
+<div id="basic-probability" class="section level1">
+<h1>Basic probability</h1>
+<p>The probababilty of perticuar event can be described as:</p>
+<p><span class="math display">\[ \text{Probabillity} = \frac{\text{Number of favourable outcome}}{\text{Number of possible eaqually like outcomes}} \]</span></p>
+<p>Lets assume simple coin. It has a two faces and if you toss the coin it will give result either <strong>HEAD</strong> or <strong>TAIL</strong></p>
+<p>The probability of the coin landing H or HEAD is <span class="math inline">\(P(H)\)</span></p>
+<p>And the probability of the coin landing T or TAIL is <span class="math inline">\(P(T)\)</span></p>
+<p>Given that all outcomes are equally likely, we can compute the probability of a landing HEAD using the formula:</p>
+<p><span class="math display">\[P(H) = \frac{\text{Number of favourable outcome}}{\text{Number of possible eaqually like outcomes}} = \frac{1}{2} \]</span></p>
+<p>Similarly probability of landing TAIL is <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+<p>Probability is <em>Just a Guide</em>.</p>
+<p>Probability does not confirm us exactly what will happen, it is just a guide.</p>
+<p>Example: toss a coin 10 times, how many Heads will come up? According to the Probability of the coin landing Head is ½ chance, so we can expect 5 Heads. But when we actually try it we might get 3 heads, or 4 heads … or anything really.</p>
+<p>Lets simulate this using some R script</p>
+<ol style="list-style-type: decimal">
+<li>we create the coin &amp; assign “H” &amp; “T” (for HEAD &amp; TAIL)</li>
+</ol>
+<pre class="r"><code>coin &lt;- c(&quot;H&quot;,&quot;T&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>toss the coin 10 times and store the results in <strong>result</strong></li>
+</ol>
+<pre class="r"><code>result &lt;- sample(coin,10, replace = TRUE)</code></pre>
+<p>Lets see the result</p>
+<pre class="r"><code>result</code></pre>
+<pre><code>##  [1] &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot;</code></pre>
+<p>We can show as a table</p>
+<pre class="r"><code>table(result)</code></pre>
+<pre><code>## result
+## H T 
+## 4 6</code></pre>
+<p>Lets convert the table to data frame.</p>
+<pre class="r"><code>df_total &lt;- data.frame(table(result))</code></pre>
+<p>Lets see the <code>df_total</code></p>
+<pre class="r"><code>df_total</code></pre>
+<pre><code>##   result Freq
+## 1      H    4
+## 2      T    6</code></pre>
+<p>with above results we can see HEAD 4 times and TAIL <code>df_total$Freq[df_total$result == &quot;T&quot;]</code> times.</p>
+<p>Using <code>prop.table()</code> we can add additional columns to show probability of each “H” &amp; “T”</p>
+<pre class="r"><code>df_prob &lt;- cbind(df_total, prop.table(df_total$Freq))
+names(df_prob) &lt;- c(&quot;result&quot;,&quot;Freq&quot;, &quot;probability&quot;)
+df_prob</code></pre>
+<pre><code>##   result Freq probability
+## 1      H    4         0.4
+## 2      T    6         0.6</code></pre>
+<p>To show the results graphically we can generate bar plot using <code>barplot</code> in base R</p>
+<pre class="r"><code>barplot(df_prob$Freq, names.arg = df_total$result, main = &quot;Head &amp; Tail count of Tossing a coin 10 times&quot;)</code></pre>
+<p><img src="/page/simprob_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>barplot(df_prob$probability, names.arg = df_total$result, main = &quot;Probability of Tossing a coin 10 times&quot;)</code></pre>
+<p><img src="/page/simprob_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+<p><strong>What is the conclusion?</strong></p>
+<blockquote>
+<p>seems number of HEAD or TAIL frequencies are equal/ not equal?</p>
+</blockquote>
+<p>Probability of HEAD <span class="math inline">\(P(H)\)</span></p>
+<p>Probability of TAIL <span class="math inline">\(P(T)\)</span></p>
+<p>In here <span class="math inline">\(P(H) = P(T) = \frac{1}{2}\)</span> may be/may not be observed.</p>
+<blockquote>
+<p>Probability is Just a Guide Probability does not confirm us exactly what will happen</p>
+</blockquote>
+<div id="toss-coin-function" class="section level2">
+<h2>toss Coin function</h2>
+<p>To demonstrate that we can create <strong>tossCoin</strong> function &amp; <strong>plotCoin</strong> function to plot the results nicely.</p>
+<p>We can use <code>ggplot2</code> package to create plots and <code>gridExtra</code> package to arrange the plots.</p>
+<pre class="r"><code>library(ggplot2)
+library(gridExtra)</code></pre>
+<p>Lets write the two functions.</p>
+<pre class="r"><code>tossCoin &lt;- function(numToss = 10){
+  coin &lt;- c(&quot;H&quot;,&quot;T&quot;)
+  result &lt;- sample(coin,numToss, replace = TRUE)
+  df_total &lt;- data.frame(table(result))
+  
+
+}
+
+plotCoin &lt;- function(df){
+  number &lt;- sum(df$Freq)
+  
+  
+  plot1 &lt;- ggplot(df, aes(result,Freq, fill = result)) + geom_bar(stat = &quot;identity&quot;) + labs(title = paste0(&quot;Tossing a coin &quot;, number,&quot; times&quot;)) +theme(legend.position = &quot;none&quot;)
+  plot2 &lt;- ggplot(df, aes(result, prop.table(df$Freq), fill = result)) + geom_bar(stat = &quot;identity&quot;) + labs(title = paste0(&quot;Measured probability of Tossing a coin &quot;, number,&quot; times&quot;), y = &quot;Probability&quot;) + theme(legend.position = &quot;none&quot;)
+  
+  grid.arrange(plot1, plot2)
+  
+}</code></pre>
+<p>Lets see the results by tossing coin 50 times</p>
+<pre class="r"><code>df50 &lt;- tossCoin(50)
+df50</code></pre>
+<pre><code>##   result Freq
+## 1      H   27
+## 2      T   23</code></pre>
+<pre class="r"><code>plotCoin(df50)</code></pre>
+<p><img src="/page/simprob_files/figure-html/50Coin-1.png" width="672" /></p>
+<p>May be 1000 times</p>
+<pre class="r"><code>df1000 &lt;- tossCoin(1000)
+df1000</code></pre>
+<pre><code>##   result Freq
+## 1      H  478
+## 2      T  522</code></pre>
+<pre class="r"><code>plotCoin(df1000)</code></pre>
+<p><img src="/page/simprob_files/figure-html/1000Coin-1.png" width="672" /></p>
+<blockquote>
+<p>So if we toss the coin large number of times, the probability of each occurance is approximately/equal to the theoritical probability.</p>
+</blockquote>
+<p>Lets try some big number…</p>
+<pre class="r"><code>df1million &lt;- tossCoin(1000000)
+df1million</code></pre>
+<pre><code>##   result   Freq
+## 1      H 501170
+## 2      T 498830</code></pre>
+<pre class="r"><code>plotCoin(df1million)</code></pre>
+<p><img src="/page/simprob_files/figure-html/millionCoin-1.png" width="672" /> ***</p>
+</div>
+<div id="can-you-think-of-similar-procedure-for-toss-a-dice." class="section level2">
+<h2>Can you think of similar procedure for toss a Dice.</h2>
+<p>In here instead of two outcomes we have 6 outcomes.</p>
+</div>
+<div id="toss-dice-function" class="section level2">
+<h2>toss Dice function</h2>
+<p>To demonstrate that we can create <strong>tossDice</strong> function &amp; <strong>plotDice</strong> function similar to toss Coin.</p>
+<pre class="r"><code>tossDice &lt;- function(numToss = 10){
+  dice &lt;- c(1:6)
+  result &lt;- sample(dice, numToss, replace = TRUE)
+  df_total &lt;- data.frame(table(result))
+  
+}
+
+plotDice &lt;- function(df){
+  number &lt;- sum(df$Freq)
+  
+ 
+  plot1 &lt;- ggplot(df, aes(result,Freq, fill = result)) + geom_bar(stat = &quot;identity&quot;) + labs(title = paste0(&quot;Tossing a dice &quot;, number,&quot; times&quot;)) +theme(legend.position = &quot;none&quot;)
+
+
+  plot2 &lt;- ggplot(df, aes(result, prop.table(df$Freq), fill = result)) + geom_bar(stat = &quot;identity&quot;) + labs(title = paste0(&quot;Probability of Tossing a dice &quot;, number,&quot; times&quot;), y = &quot;Probability&quot;) + theme(legend.position = &quot;none&quot;)
+  
+  grid.arrange(plot1, plot2)
+
+}</code></pre>
+<p>Lets see the results by tossing coin 50 times</p>
+<pre class="r"><code>df50 &lt;- tossDice(50)
+df50</code></pre>
+<pre><code>##   result Freq
+## 1      1    5
+## 2      2   10
+## 3      3    7
+## 4      4    9
+## 5      5    5
+## 6      6   14</code></pre>
+<pre class="r"><code>plotDice(df50)</code></pre>
+<p><img src="/page/simprob_files/figure-html/50Dice-1.png" width="672" /></p>
+<p>May be 1000 times</p>
+<pre class="r"><code>df1000 &lt;- tossDice(1000)
+df1000</code></pre>
+<pre><code>##   result Freq
+## 1      1  173
+## 2      2  153
+## 3      3  164
+## 4      4  193
+## 5      5  151
+## 6      6  166</code></pre>
+<pre class="r"><code>plotDice(df1000)</code></pre>
+<p><img src="/page/simprob_files/figure-html/1000Dice-1.png" width="672" /></p>
+<p>Dice can be tossed 1 million times</p>
+<pre class="r"><code>df1million &lt;- tossDice(1000000)
+df1million</code></pre>
+<pre><code>##   result   Freq
+## 1      1 165817
+## 2      2 166451
+## 3      3 166607
+## 4      4 166856
+## 5      5 167315
+## 6      6 166954</code></pre>
+<pre class="r"><code>plotDice(df1million)</code></pre>
+<p><img src="/page/simprob_files/figure-html/millionDice-1.png" width="672" /></p>
+<p>as a proportional table</p>
+<pre class="r"><code>cbind(df1million, prop.table(df1million$Freq))</code></pre>
+<pre><code>##   result   Freq prop.table(df1million$Freq)
+## 1      1 165817                    0.165817
+## 2      2 166451                    0.166451
+## 3      3 166607                    0.166607
+## 4      4 166856                    0.166856
+## 5      5 167315                    0.167315
+## 6      6 166954                    0.166954</code></pre>
+<blockquote>
+<p>We can see if the number of times tossing dice increases the probablity of each occurance is approximating to <span class="math inline">\(\frac{1}{6} = 0.1666667\)</span></p>
+</blockquote>
+</div>
+</div>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <ul class="list-inline footer-links">
+                
+
+
+<li>
+    <a href="//twitter.com/share?url=%2fpage%2fsimprob%2f&amp;text=Simple%20Probability&amp;via="
+       target="_blank" alt="" title="Share on Twitter">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//plus.google.com/share?url=%2fpage%2fsimprob%2f" target="_blank" title="Share on Google Plus">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.facebook.com/sharer/sharer.php?u=%2fpage%2fsimprob%2f" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//reddit.com/submit?url=%2fpage%2fsimprob%2f&amp;title=Simple%20Probability" target="_blank" title="Share on Reddit">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.linkedin.com/shareArticle?url=%2fpage%2fsimprob%2f&amp;title=Simple%20Probability" target="_blank"
+       title="Share on LinkedIn">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.stumbleupon.com/submit?url=%2fpage%2fsimprob%2f&amp;title=Simple%20Probability" target="_blank"
+       title="Share on StumbleUpon">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stumbleupon fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.pinterest.com/pin/create/button/?url=%2fpage%2fsimprob%2f&amp;description=Simple%20Probability" target="_blank"
+       title="Share on Pinterest">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+              </ul>
+            </section>
+        
+      </article>
+
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/SAbhaya" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sudarshana7" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">SA</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">Sudarshana A</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.45.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

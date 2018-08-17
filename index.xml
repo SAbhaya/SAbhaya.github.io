@@ -74,7 +74,8 @@ ruby --version I had to installed Ruby, then bundler but after completting most 
       <pubDate>Fri, 23 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018-03-23-simple-probability/</guid>
-      <description>Add more functinality to my simple probability R markdown files. Used dplyr and tidyr packages to arrange data.</description>
+      <description>Add more functinality to my simple probability R markdown files. Used dplyr and tidyr packages to arrange data.
+But later I have changed the code so that most of the data was arranged using base R.</description>
     </item>
     
     <item>
@@ -132,6 +133,18 @@ GIT Bash Also used Git Bash..</description>
       
       <guid>/page/about/</guid>
       <description>I am Sudarshana, an engineer, data science enthusiatic, busy with life as usual, learning everyday!!!</description>
+    </item>
+    
+    <item>
+      <title>Simple Probability</title>
+      <link>/page/simprob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/simprob/</guid>
+      <description>Introduction This is to explain some very simple probability &amp;amp; using R scripts to demonstrate the probability concept. Most of you already know these things. We can use this to revise some basic probability concepts.
+ Basic probability The probababilty of perticuar event can be described as:
+\[ \text{Probabillity} = \frac{\text{Number of favourable outcome}}{\text{Number of possible eaqually like outcomes}} \]
+Lets assume simple coin. It has a two faces and if you toss the coin it will give result either HEAD or TAIL</description>
     </item>
     
   </channel>
