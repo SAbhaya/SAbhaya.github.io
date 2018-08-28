@@ -225,27 +225,27 @@ if (!doNotTrack) {
 <pre class="r"><code>result &lt;- sample(coin,10, replace = TRUE)</code></pre>
 <p>Lets see the result</p>
 <pre class="r"><code>result</code></pre>
-<pre><code>##  [1] &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot;</code></pre>
+<pre><code>##  [1] &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;H&quot;</code></pre>
 <p>We can show as a table</p>
 <pre class="r"><code>table(result)</code></pre>
 <pre><code>## result
 ## H T 
-## 4 6</code></pre>
+## 5 5</code></pre>
 <p>Lets convert the table to data frame.</p>
 <pre class="r"><code>df_total &lt;- data.frame(table(result))</code></pre>
 <p>Lets see the <code>df_total</code></p>
 <pre class="r"><code>df_total</code></pre>
 <pre><code>##   result Freq
-## 1      H    4
-## 2      T    6</code></pre>
-<p>with above results we can see HEAD 4 times and TAIL <code>df_total$Freq[df_total$result == &quot;T&quot;]</code> times.</p>
+## 1      H    5
+## 2      T    5</code></pre>
+<p>with above results we can see HEAD 5 times and TAIL 5 times.</p>
 <p>Using <code>prop.table()</code> we can add additional columns to show probability of each “H” &amp; “T”</p>
 <pre class="r"><code>df_prob &lt;- cbind(df_total, prop.table(df_total$Freq))
 names(df_prob) &lt;- c(&quot;result&quot;,&quot;Freq&quot;, &quot;probability&quot;)
 df_prob</code></pre>
 <pre><code>##   result Freq probability
-## 1      H    4         0.4
-## 2      T    6         0.6</code></pre>
+## 1      H    5         0.5
+## 2      T    5         0.5</code></pre>
 <p>To show the results graphically we can generate bar plot using <code>barplot</code> in base R</p>
 <pre class="r"><code>barplot(df_prob$Freq, names.arg = df_total$result, main = &quot;Head &amp; Tail count of Tossing a coin 10 times&quot;)</code></pre>
 <p><img src="/page/simprob_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
@@ -290,16 +290,16 @@ plotCoin &lt;- function(df){
 <pre class="r"><code>df50 &lt;- tossCoin(50)
 df50</code></pre>
 <pre><code>##   result Freq
-## 1      H   27
-## 2      T   23</code></pre>
+## 1      H   24
+## 2      T   26</code></pre>
 <pre class="r"><code>plotCoin(df50)</code></pre>
 <p><img src="/page/simprob_files/figure-html/50Coin-1.png" width="672" /></p>
 <p>May be 1000 times</p>
 <pre class="r"><code>df1000 &lt;- tossCoin(1000)
 df1000</code></pre>
 <pre><code>##   result Freq
-## 1      H  478
-## 2      T  522</code></pre>
+## 1      H  510
+## 2      T  490</code></pre>
 <pre class="r"><code>plotCoin(df1000)</code></pre>
 <p><img src="/page/simprob_files/figure-html/1000Coin-1.png" width="672" /></p>
 <blockquote>
@@ -309,8 +309,8 @@ df1000</code></pre>
 <pre class="r"><code>df1million &lt;- tossCoin(1000000)
 df1million</code></pre>
 <pre><code>##   result   Freq
-## 1      H 501170
-## 2      T 498830</code></pre>
+## 1      H 500299
+## 2      T 499701</code></pre>
 <pre class="r"><code>plotCoin(df1million)</code></pre>
 <p><img src="/page/simprob_files/figure-html/millionCoin-1.png" width="672" /> ***</p>
 </div>
@@ -344,47 +344,47 @@ plotDice &lt;- function(df){
 <pre class="r"><code>df50 &lt;- tossDice(50)
 df50</code></pre>
 <pre><code>##   result Freq
-## 1      1    5
-## 2      2   10
+## 1      1   13
+## 2      2    9
 ## 3      3    7
-## 4      4    9
-## 5      5    5
-## 6      6   14</code></pre>
+## 4      4    4
+## 5      5    6
+## 6      6   11</code></pre>
 <pre class="r"><code>plotDice(df50)</code></pre>
 <p><img src="/page/simprob_files/figure-html/50Dice-1.png" width="672" /></p>
 <p>May be 1000 times</p>
 <pre class="r"><code>df1000 &lt;- tossDice(1000)
 df1000</code></pre>
 <pre><code>##   result Freq
-## 1      1  173
-## 2      2  153
-## 3      3  164
-## 4      4  193
-## 5      5  151
-## 6      6  166</code></pre>
+## 1      1  174
+## 2      2  188
+## 3      3  159
+## 4      4  167
+## 5      5  152
+## 6      6  160</code></pre>
 <pre class="r"><code>plotDice(df1000)</code></pre>
 <p><img src="/page/simprob_files/figure-html/1000Dice-1.png" width="672" /></p>
 <p>Dice can be tossed 1 million times</p>
 <pre class="r"><code>df1million &lt;- tossDice(1000000)
 df1million</code></pre>
 <pre><code>##   result   Freq
-## 1      1 165817
-## 2      2 166451
-## 3      3 166607
-## 4      4 166856
-## 5      5 167315
-## 6      6 166954</code></pre>
+## 1      1 166338
+## 2      2 166591
+## 3      3 166153
+## 4      4 167226
+## 5      5 167155
+## 6      6 166537</code></pre>
 <pre class="r"><code>plotDice(df1million)</code></pre>
 <p><img src="/page/simprob_files/figure-html/millionDice-1.png" width="672" /></p>
 <p>as a proportional table</p>
 <pre class="r"><code>cbind(df1million, prop.table(df1million$Freq))</code></pre>
 <pre><code>##   result   Freq prop.table(df1million$Freq)
-## 1      1 165817                    0.165817
-## 2      2 166451                    0.166451
-## 3      3 166607                    0.166607
-## 4      4 166856                    0.166856
-## 5      5 167315                    0.167315
-## 6      6 166954                    0.166954</code></pre>
+## 1      1 166338                    0.166338
+## 2      2 166591                    0.166591
+## 3      3 166153                    0.166153
+## 4      4 167226                    0.167226
+## 5      5 167155                    0.167155
+## 6      6 166537                    0.166537</code></pre>
 <blockquote>
 <p>We can see if the number of times tossing dice increases the probablity of each occurance is approximating to <span class="math inline">\(\frac{1}{6} = 0.1666667\)</span></p>
 </blockquote>
