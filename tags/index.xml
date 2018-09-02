@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>Games</title>
+      <link>/tags/games/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/games/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>/tags/git/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
@@ -43,6 +52,24 @@
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minecraft</title>
+      <link>/tags/minecraft/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/minecraft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minetest</title>
+      <link>/tags/minetest/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/minetest/</guid>
       <description></description>
     </item>
     
